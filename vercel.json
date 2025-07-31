@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm install && pnpm build",
+  "installCommand": "corepack enable && corepack prepare pnpm@10.13.1 --activate && pnpm install",
+  "framework": "nextjs",
+  "regions": ["sin1"],
+  "build": {
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1"
+    }
+  }
+} 
