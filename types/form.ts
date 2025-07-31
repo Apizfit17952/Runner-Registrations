@@ -1,0 +1,39 @@
+import { BloodGroup } from "@/src/data/bloodGroups";
+
+export interface RegistrationForm {
+  // --- PERSONEL INFORMATION ---
+  firstName: string;
+  lastName: string;
+  email: string;
+  mobile: string;
+  gender: "MALE" | "FEMALE" | "OTHER";
+  dateOfBirth: string;
+  identityCardNumber: string;
+  country: string;
+  pincode: string;
+  state: string;
+  city: string;
+  occupation: string;
+  bloodGroup: BloodGroup | "";
+  selfie: File | null;
+
+  isFromBastar: boolean;
+  needsAccommodation: boolean;
+
+  paymentMethod: "UPI" | "NETBANKING" | "CARD";
+
+  // --- CARD PAYMENT ---
+  cardNumber: string;
+  cardName: string;
+  expiryDate: Date | null;
+  cvv: number | null;
+
+  // --- OTP VERIFICATION ---
+  otp?: string;
+
+  // --- MARATHON DETAILS ---
+  raceCategory: string;
+  tShirtSize: string;
+  emergencyContactNumber: string;
+  emergencyContactName: string;
+}
